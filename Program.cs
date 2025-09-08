@@ -58,20 +58,36 @@ namespace Learning
             //     Console.WriteLine(!hasPermit? "You don't need a permit anyways" : "You can get the full DL package");
             // }
 
-            Console.WriteLine("yes or no");
-            string answer = Console.ReadLine()!;
-            switch (answer)
+            // switches
+            // Console.WriteLine("yes or no");
+            // string answer = Console.ReadLine()!;
+            // switch (answer)
+            // {
+            //     case "yes":
+            //         Console.WriteLine("said yes");
+            //         break;
+            //     case "no":
+            //         Console.WriteLine("said no");
+            //         break;
+            //     default:
+            //         Console.WriteLine("didn't listen to the command");
+            //         break;
+            // } // if statements >>>>>
+
+            // loops
+            //for (int looper = 0; looper < 10; looper++) also works
+            int looper = 0;
+            for (; looper < 10; looper++) // in order to use an outside variable for the loop, outside must be left empty, but just use a while loop atp
             {
-                case "yes":
-                    Console.WriteLine("said yes");
-                    break;
-                case "no":
-                    Console.WriteLine("said no");
-                    break;
-                default:
-                    Console.WriteLine("didn't listen to the command");
-                    break;
-            } // if statements >>>>>
+                Console.WriteLine(looper);
+            }
+
+            looper = 0;
+            while (looper < 3)
+            {
+                Console.WriteLine(looper);
+                looper++;
+            }
         }
     }
 }
