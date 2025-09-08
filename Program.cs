@@ -36,10 +36,27 @@ namespace Learning
             // int myInt = Convert.ToInt32(Console.ReadLine()); // can put zeros in front
             // Console.WriteLine(funky_num + myInt); // C# allows this, int + float, and operations within prints
 
-            Random rand = new Random(); // create object rand of class random, Next, NextBytes, NextDouble
-            int num1 = rand.Next(); // non neg random int
-            double num2 = rand.NextDouble(); // 0.0 <= x < 1.0, double data type better than float dt??
-            Console.WriteLine(num1 + num2);
+            // Random rand = new Random(); // create object rand of class random, Next, NextBytes, NextDouble
+            // int num1 = rand.Next(); // non neg random int
+            // double num2 = rand.NextDouble(); // 0.0 <= x < 1.0, double data type better than float dt??
+            // Console.WriteLine(num1 + num2);
+
+            Console.WriteLine("Enter your age:");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Do you have a permit? (yes/no)");
+            bool hasPermit = (Console.ReadLine() == "yes");
+            if (16 <= age && age < 18) // cant do 16 < age < 18, CS0019
+            {
+                Console.WriteLine(hasPermit? "You can get a Provisional DL!" : "You need a permit before getting a DL");
+            }
+            else if (age < 16)
+            {
+                Console.WriteLine("We got nba YOUNGboy over here");
+            }
+            else
+            {
+                Console.WriteLine(!hasPermit? "You don't need a permit anyways" : "You can get the full DL package");
+            }
 
         }
     }
