@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Learning
 {
     class Test
@@ -6,7 +7,7 @@ namespace Learning
         public static void Main(string[] args)
         {
             // basic start
-            Console.WriteLine("Hello World!");
+            // Console.WriteLine("Hello World!");
 
             //creating/learing data types
             // int num = 69;
@@ -76,17 +77,31 @@ namespace Learning
 
             // loops
             //for (int looper = 0; looper < 10; looper++) also works
-            int looper = 0;
-            for (; looper < 10; looper++) // in order to use an outside variable for the loop, outside must be left empty, but just use a while loop atp
-            {
-                Console.WriteLine(looper);
-            }
+            // int looper = 0;
+            // for (; looper < 10; looper++) // in order to use an outside variable for the loop, outside must be left empty, but just use a while loop atp
+            // {
+            //     Console.WriteLine(looper);
+            // }
 
-            looper = 0;
-            while (looper < 3)
+            // looper = 0;
+            // while (looper < 3)
+            // {
+            //     Console.WriteLine(looper);
+            //     looper++;
+            // }
+
+            // Arrays
+            int[] numbers_list = new int[5];
+            numbers_list = new int[] { 0, 1, 2, 3, 4 }; // must use new dtype {list items}; for reassignment aswell
+            string[] flowers = { "rose", "peony", "dandelion", "tulip" }; // new listdtype[length] not required if providing the whole list at assignment
+            numbers_list[2] = 6;
+            foreach (int numb in numbers_list)
             {
-                Console.WriteLine(looper);
-                looper++;
+                Console.WriteLine(numb);
+            }
+            for (int i = 0; i < flowers.Length; i++)
+            {
+                Console.WriteLine(flowers[i]);
             }
         }
     }
