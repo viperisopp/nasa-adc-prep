@@ -41,23 +41,37 @@ namespace Learning
             // double num2 = rand.NextDouble(); // 0.0 <= x < 1.0, double data type better than float dt??
             // Console.WriteLine(num1 + num2);
 
-            Console.WriteLine("Enter your age:");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Do you have a permit? (yes/no)");
-            bool hasPermit = (Console.ReadLine() == "yes");
-            if (16 <= age && age < 18) // cant do 16 < age < 18, CS0019
-            {
-                Console.WriteLine(hasPermit? "You can get a Provisional DL!" : "You need a permit before getting a DL");
-            }
-            else if (age < 16)
-            {
-                Console.WriteLine("We got nba YOUNGboy over here");
-            }
-            else
-            {
-                Console.WriteLine(!hasPermit? "You don't need a permit anyways" : "You can get the full DL package");
-            }
+            // Console.WriteLine("Enter your age:");
+            // int age = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Do you have a permit? (yes/no)");
+            // bool hasPermit = (Console.ReadLine() == "yes");
+            // if (16 <= age && age < 18) // cant do 16 < age < 18, CS0019
+            // {
+            //     Console.WriteLine(hasPermit? "You can get a Provisional DL!" : "You need a permit before getting a DL");
+            // }
+            // else if (age < 16)
+            // {
+            //     Console.WriteLine("We got nba YOUNGboy over here");
+            // }
+            // else
+            // {
+            //     Console.WriteLine(!hasPermit? "You don't need a permit anyways" : "You can get the full DL package");
+            // }
 
+            Console.WriteLine("yes or no");
+            string answer = Console.ReadLine()!;
+            switch (answer)
+            {
+                case "yes":
+                    Console.WriteLine("said yes");
+                    break;
+                case "no":
+                    Console.WriteLine("said no");
+                    break;
+                default:
+                    Console.WriteLine("didn't listen to the command");
+                    break;
+            } // if statements >>>>>
         }
     }
 }
